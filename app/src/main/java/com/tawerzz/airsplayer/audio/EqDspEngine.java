@@ -233,13 +233,13 @@ public final class EqDspEngine {
 
     public static float effectiveQ(int index, float baseQ, float gainDb) {
         if (isShelf(index)) return baseQ;
-        double scale = Math.pow(Q_FACTOR, 1.0 - 2.0 * Math.abs(gainDb) / 30.0);
+        double scale = Math.pow(Q_FACTOR, 1.0 - Math.abs(gainDb) / 30.0);
         return (float) (baseQ * scale);
     }
 
     public static float baseQFromEffective(int index, float effectiveQ, float gainDb) {
         if (isShelf(index)) return effectiveQ;
-        double scale = Math.pow(Q_FACTOR, 1.0 - 2.0 * Math.abs(gainDb) / 30.0);
+        double scale = Math.pow(Q_FACTOR, 1.0 - Math.abs(gainDb) / 30.0);
         return (float) (effectiveQ / scale);
     }
 

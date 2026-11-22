@@ -178,7 +178,7 @@ class MainActivity : Activity() {
         }
         eqScrollView = ScrollView(this).apply {
             isFillViewport = true
-            addView(eqView, ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+            addView(eqView, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         }
         val heading = LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
